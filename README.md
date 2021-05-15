@@ -17,7 +17,7 @@ js, html, scss, css를 이용한 간단한 형식의 음악 게임입니다. <br
 
 
 
-### <a href="https://shields.io/"> 구경 하러가기 </a>
+### <a href="https://3w0ne.csb.app/"> 구경 하러가기 </a>
 
 ---
 
