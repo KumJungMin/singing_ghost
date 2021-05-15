@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+html,
+body {
+  height: 100%;
+}
+html {
+  background: #eee;
+  font-family: "Lobster", cursive;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #303030;
+  transition: 0.3s;
+}
+#popover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+  background: black;
+  opacity: 0.9;
+  z-index: 1;
+  transition: 0.2s;
+}
+.example {
+  width: 50%;
+  height: 50%;
+  margin-bottom: 1rem;
+  background-image: url("../music/tutorial.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.btn-start {
+  width: 10rem;
+  height: 3.5rem;
+  border: 2px solid #fff;
+  background: #1a1a1a;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+.btn-start:hover {
+  cursor: pointer;
+  border: 2px solid orange;
+  box-shadow: 0 0 2px orange, 0 0 10px orange;
+}
+.btn-hint {
+  width: 2.3rem;
+  height: 2.3rem;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 130%;
+  border-radius: 50%;
+  border: 0;
+  z-index: 1;
+}
+#sunglass {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 27px;
+  left: 110px;
+  transition: 0.2s;
+}
+.title {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 2px 2px 2px black;
+}
