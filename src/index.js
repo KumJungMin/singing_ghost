@@ -63,9 +63,10 @@ window.addEventListener("keydown", function (e) {
       }
     }
   } else if (isVaildKeys.includes(e.key)) {
-    aniDuration = "infinite";
-    if (aniDuration !== "aniDuration")
+    if (aniDuration !== "infinite") {
       html.style.setProperty("--iteration", aniDuration);
+      aniDuration = "infinite";
+    }
     sunglass.style.top = "50px";
     sunglass.style.opacity = 0.8;
   }
