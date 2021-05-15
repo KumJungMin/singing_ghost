@@ -13,6 +13,9 @@ const startButton = document.querySelector(".btn-start");
 const popover = document.querySelector("#popover");
 const hintButton = document.querySelector(".btn-hint");
 
+//global variable
+let aniDuration = "";
+
 // set background square
 const SQUARE_NUM = 5000;
 for (let i = 0; i < SQUARE_NUM; i++) {
@@ -45,7 +48,8 @@ window.addEventListener("keydown", function (e) {
   const isVaildKeys = ["1", "2", "3", "4", "5", "6", "7", "8"];
   const texts = ["DO", "RE", "Mi", "PA", "SOL", "LA", "SHI", "DO"];
   if (e.key === "Enter") {
-    html.style.setProperty("--iteration", "0");
+    aniDuration = "0";
+    html.style.setProperty("--iteration", aniDuration);
     wrap.style.background = "skyblue";
     wrap.style.boxShadow = "20px 20px 28px #1a1a1a, -20px -20px 28px #242424";
     mouse.style.transform = `scaleY(1)`;
@@ -59,7 +63,9 @@ window.addEventListener("keydown", function (e) {
       }
     }
   } else if (isVaildKeys.includes(e.key)) {
-    html.style.setProperty("--iteration", "infinite");
+    aniDuration = "infinite";
+    if (aniDuration !== "aniDuration")
+      html.style.setProperty("--iteration", aniDuration);
     sunglass.style.top = "50px";
     sunglass.style.opacity = 0.8;
   }
