@@ -45,8 +45,8 @@ wrap.addEventListener("mouseout", function (e) {
 });
 window.addEventListener("keydown", function (e) {
   const musics = document.querySelectorAll(".music");
-  const isVaildKeys = ["1", "2", "3", "4", "5", "6", "7", "8"];
-  const texts = ["DO", "RE", "Mi", "PA", "SOL", "LA", "SHI", "DO"];
+  const isVaildKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+  const texts = ["DO", "RE", "Mi", "PA", "SOL", "LA", "SHI", "DO", "RE", "MI"];
   if (e.key === "Enter") {
     aniDuration = "0";
     html.style.setProperty("--iteration", aniDuration);
@@ -70,8 +70,9 @@ window.addEventListener("keydown", function (e) {
     sunglass.style.top = "50px";
     sunglass.style.opacity = 0.8;
   }
-  for (let i = 1; i < 9; i++) {
+  for (let i = 0; i <= isVaildKeys.length; i++) {
     if (e.key === i + "") {
+      const textIdx = e.key === "0" ? 9 : i - 1;
       const backColor = getRandomColor();
       container.style.background = backColor;
       container.style.opacity = 0.6;
@@ -79,7 +80,7 @@ window.addEventListener("keydown", function (e) {
       wrap.style.boxShadow = `0 0 2px ${backColor}, 0  0 10px ${backColor}`;
       mouse.style.transform = `scaleY(${1 + i / 5})`;
       for (let j = 0; j < musics.length; j++) {
-        getMusicText(texts[i - 1], musics[j]);
+        getMusicText(texts[textIdx], musics[j]);
       }
     }
   }
