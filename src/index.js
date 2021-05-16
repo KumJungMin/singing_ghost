@@ -74,11 +74,12 @@ window.addEventListener("keydown", function (e) {
     if (e.key === i + "") {
       const textIdx = e.key === "0" ? 9 : i - 1;
       const backColor = getRandomColor();
+      const mouseOpen = i !== 0 ? 1 + i / 5 : 3.2; 
       container.style.background = backColor;
       container.style.opacity = 0.6;
       wrap.style.background = backColor;
       wrap.style.boxShadow = `0 0 2px ${backColor}, 0  0 10px ${backColor}`;
-      mouse.style.transform = `scaleY(${1 + i / 5})`;
+      mouse.style.transform = `scaleY(${mouseOpen})`;
       for (let j = 0; j < musics.length; j++) {
         getMusicText(texts[textIdx], musics[j]);
       }
