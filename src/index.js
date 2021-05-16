@@ -74,7 +74,7 @@ window.addEventListener("keydown", function (e) {
     if (e.key === i + "") {
       const textIdx = e.key === "0" ? 9 : i - 1;
       const backColor = getRandomColor();
-      const mouseOpen = i !== 0 ? 1 + i / 5 : 3.2; 
+      const mouseOpen = i !== 0 ? 1 + i / 5 : 3.2;
       container.style.background = backColor;
       container.style.opacity = 0.6;
       wrap.style.background = backColor;
@@ -138,10 +138,17 @@ function getRandomColor() {
 }
 
 // TODO: safari audio preload bug
-const ua = navigator.userAgent.toLowerCase(); 
-if (ua.indexOf('safari') != -1) { 
-  if (ua.indexOf('chrome') > -1) {} else {
+const body = document.body;
+const ua = navigator.userAgent.toLowerCase();
+if (ua.indexOf("safari") != -1) {
+  if (ua.indexOf("chrome") > -1) {
+  } else {
     alert("we don't apply safari, please open chorme! safati coming soon~"); // Safari
-    html.style.display = "none";
+    body.style.display = "none";
+    html.style.background = "black";
+    html.style.backgroundPosition = "center center";
+    html.style.backgroundSize = "50%";
+    html.style.backgroundRepeat = "no-repeat";
+    html.style.backgroundImage = "url('../music/sorry_message.png')";
   }
 }
